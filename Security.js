@@ -4,8 +4,8 @@ let unlocked = false;
 
 function setup(){
   const start = new Date();
-  secureElements = document.getElementByClass("secure");
-  secureContent = document.getElementByClass("secure-content");
+  secureElements = document.querySelector(".secure");
+  secureContent = document.querySelector(".secure-content");
   secureContent.forEach(s => {s.disabled = true;})
   const button = document.createElement("button");
   button.textContent = "Prove I'm not a robot";
