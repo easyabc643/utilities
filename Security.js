@@ -5,10 +5,11 @@ let unlocked = false;
 function setup(){
   const start = new Date();
   secureElements = document.querySelector(".secure");
-  secureContent = document.querySelector(".secure-content");
+  secureContent = document.querySelectorAll(".secure-content");
   secureContent.forEach(s => {s.disabled = true;})
   const button = document.createElement("button");
   button.textContent = "Prove I'm not a robot";
+  secureElements.prepend(button);
   function handleClick(){
     const end = new Date();
     if(end - start > 500){
